@@ -133,9 +133,7 @@ services:
     environment:
       - KAFKA_SERVERS=kfk1:9092,kfk2:9092,kfk3:9092
       - KAFKA_TOPIC=host_ip
-## default api is https://api.ipify.org/ but u can change it in next line
 #     - IP_WEB_API=
-## default log level is warning    
 #     - LOG_LEVEL=INFO
     depends_on:
       - zoo1
@@ -157,8 +155,6 @@ services:
       - KAFKA_SERVERS=kfk1:9092,kfk2:9092,kfk3:9092
       - KAFKA_TOPIC=host_ip
 #     - AUTO_OFFSET_RESET=latest
-      - AUTO_OFFSET_RESET=earliest
-## default log level is warning    
 #     - LOG_LEVEL=INFO
     depends_on:
       - zoo1
