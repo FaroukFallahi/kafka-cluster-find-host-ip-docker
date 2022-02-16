@@ -15,7 +15,7 @@ logLevel = env.get('LOG_LEVEL','WARNING')
 logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',level=logLevel)
 
 # waiting for kafka and zookeeper being ready
-sleep(3)
+sleep(6)
 
 producer = KafkaProducer(
     bootstrap_servers=servers,
