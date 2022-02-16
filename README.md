@@ -60,6 +60,11 @@ docker-compose up -d
 ```
 docker-compose logs -f consumer
 ```
+or
+
+```
+docker logs -f cons
+```
 
 >**for watch more activity**: changing the log level of `consumer` and `producer` in `docker-compose.yml` to `INFO` and run it in atach mode.
 >```
