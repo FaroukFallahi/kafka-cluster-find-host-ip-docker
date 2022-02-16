@@ -18,7 +18,6 @@ sleep(3)
 
 consumer = KafkaConsumer(
     topic,
-    group_id='grp_1',
     bootstrap_servers = servers,
     auto_offset_reset = auto_offset_reset_plan,
     api_version=(0,11,5),
