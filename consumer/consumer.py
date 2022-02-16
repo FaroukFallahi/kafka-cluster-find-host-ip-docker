@@ -29,4 +29,3 @@ for msg in consumer:
     data = msg.value
     print(data)
     logging.info('received --' +str(data))
-    sleep(5)
