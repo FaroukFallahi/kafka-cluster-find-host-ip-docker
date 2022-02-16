@@ -12,10 +12,6 @@ services:
     restart: on-failure
     networks:
       - kafka-net
-    ports:
-      - '2181'
-      - '2888'
-      - '3888'
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
       - ZOO_PORT_NUMBER=2181
@@ -29,10 +25,6 @@ services:
     restart: on-failure
     networks:
       - kafka-net
-    ports:
-      - '2181'
-      - '2888'
-      - '3888'
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
       - ZOO_PORT_NUMBER=2182
@@ -46,10 +38,6 @@ services:
     restart: on-failure
     networks:
       - kafka-net
-    ports:
-      - '2181'
-      - '2888'
-      - '3888'
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
       - ZOO_PORT_NUMBER=2183
@@ -133,8 +121,8 @@ services:
     environment:
       - KAFKA_SERVERS=kfk1:9092,kfk2:9092,kfk3:9092
       - KAFKA_TOPIC=host_ip
-#     - IP_WEB_API=
-#     - LOG_LEVEL=INFO
+#      - IP_WEB_API=
+#      - LOG_LEVEL=INFO
     depends_on:
       - zoo1
       - zoo2
@@ -154,8 +142,8 @@ services:
     environment:
       - KAFKA_SERVERS=kfk1:9092,kfk2:9092,kfk3:9092
       - KAFKA_TOPIC=host_ip
-#     - AUTO_OFFSET_RESET=latest
-#     - LOG_LEVEL=INFO
+#      - AUTO_OFFSET_RESET=latest
+#      - LOG_LEVEL=INFO
     depends_on:
       - zoo1
       - zoo2
